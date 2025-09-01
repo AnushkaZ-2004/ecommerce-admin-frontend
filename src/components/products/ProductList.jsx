@@ -12,10 +12,14 @@ const ProductList = ({ products, onEdit, onDelete }) => {
 
   const filteredProducts = products.filter((product) => {
     const matchesSearch =
-      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      product.description?.toLowerCase().includes(searchTerm.toLowerCase());
+      (product.name?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
+      (product.description?.toLowerCase() || "").includes(
+        searchTerm.toLowerCase()
+      );
+
     const matchesCategory =
       !categoryFilter || product.category === categoryFilter;
+
     return matchesSearch && matchesCategory;
   });
 
