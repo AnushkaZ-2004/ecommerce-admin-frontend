@@ -1,7 +1,10 @@
+/* src/App.css */
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #f8f9fa;
 }
 
 .app-content {
@@ -11,22 +14,75 @@
 
 .main-content {
   flex: 1;
-  padding: 20px;
+  padding: 24px;
   background-color: #f8f9fa;
   overflow-y: auto;
+  min-height: calc(100vh - 64px);
 }
 
 .loading-screen {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-size: 18px;
+  background-color: #f8f9fa;
   color: #666;
 }
 
+.loading-screen .loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.loading-screen p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Ensure proper scrolling for the main content */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Responsive adjustments for the app layout */
 @media (max-width: 768px) {
+  .app-content {
+    flex-direction: row;
+  }
+
   .main-content {
-    padding: 15px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+  }
+
+  .loading-screen p {
+    font-size: 14px;
+    text-align: center;
+    padding: 0 20px;
   }
 }

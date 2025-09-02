@@ -4,6 +4,9 @@ import ProductForm from "../components/products/ProductForm";
 import Modal from "../components/common/Modal";
 import Loading from "../components/common/Loading";
 import { productService } from "../services/productService";
+import "../styles/pages.css";
+import "../styles/components.css";
+import "../styles/global.css";
 
 const Products = () => {
   const [products, setProducts] = useState([]);

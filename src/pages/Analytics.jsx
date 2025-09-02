@@ -2,6 +2,9 @@ import React from "react";
 import SalesAnalytics from "../components/analytics/SalesAnalytics";
 import ProductAnalytics from "../components/analytics/ProductAnalytics";
 import CustomerAnalytics from "../components/analytics/CustomerAnalytics";
+import "../styles/pages.css";
+import "../styles/components.css";
+import "../styles/global.css";
 
 const Analytics = () => {
   return (

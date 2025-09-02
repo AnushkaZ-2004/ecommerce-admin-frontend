@@ -5,6 +5,9 @@ import RecentOrders from "../components/dashboard/RecentOrders";
 import Loading from "../components/common/Loading";
 import { analyticsService } from "../services/analyticsService";
 import { orderService } from "../services/orderService";
+import "../styles/pages.css";
+import "../styles/components.css";
+import "../styles/global.css";
 
 const Dashboard = () => {
   const [dashboardData, setDashboardData] = useState(null);

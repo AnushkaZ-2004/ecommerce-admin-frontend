@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { authService } from "../services/authService";
+import "../styles/pages.css";
 
 const Login = ({ onLogin }) => {
   const [formData, setFormData] = useState({
@@ -75,11 +76,6 @@ const Login = ({ onLogin }) => {
             {loading ? "Signing In..." : "Sign In"}
           </button>
         </form>
-
-        <div className="login-footer">
-          <p>Demo Admin Credentials:</p>
-          <p>Email: admin@example.com | Password: admin123</p>
-        </div>
       </div>
     </div>
   );

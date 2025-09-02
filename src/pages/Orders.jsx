@@ -4,6 +4,9 @@ import OrderDetail from "../components/orders/OrderDetail";
 import Modal from "../components/common/Modal";
 import Loading from "../components/common/Loading";
 import { orderService } from "../services/orderService";
+import "../styles/pages.css";
+import "../styles/components.css";
+import "../styles/global.css";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
